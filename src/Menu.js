@@ -12,6 +12,7 @@ import Evento from './components/Evento'
 import { Avo } from './components/ComunicacaoDireta'
 import TextoSincronizado from './components/ComunicacaoIndireta'
 import ListaFlex from './components/ListaFlex'
+import Flex from './components/Flex'
 
 // export default createDrawerNavigator({
 //   MegaSena: {
@@ -30,6 +31,7 @@ import ListaFlex from './components/ListaFlex'
 //   }
 // }, { drawerWidth: 300 })
 
+const FlexComponent = () => <Flex />
 const ListaFlexComponent = () => <ListaFlex />
 const TextoSincronizadoComponent = () => <TextoSincronizado />
 const AvoComponent = () => <Avo nome="Wilson" sobrenome="Macedo" />
@@ -51,6 +53,7 @@ function MyDrawer() {
         width: 300,
       }}
     >
+      <Drawer.Screen name='Flex' component={ FlexComponent } />
       <Drawer.Screen name='Lista Flex' component={ ListaFlexComponent } />
       <Drawer.Screen name='Texto Sincronizado' component={ TextoSincronizadoComponent } />
       <Drawer.Screen name='Avo' component={ AvoComponent } />
